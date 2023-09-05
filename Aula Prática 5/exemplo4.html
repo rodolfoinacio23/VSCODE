@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //cria uma array vazio
+        let numeros = [];
+
+        //pede ao usuário para digitar 10 números e armazena cada um no array
+        for(let i = 0 ; i < 10 ; i++){
+            numeros.push(parseInt(prompt(`Digite o ${i+1}º número: `)));
+        }
+
+        //cria variaveis para armanezar a quantiade de numeros pares e impares
+
+        let pares = 0;
+        let impares = 0;
+
+        //percorre o array de números e verifica se cada um é par ou impar
+        for(let i = 0 ; i < numeros.length ; i++){
+            if(numeros[i] % 2 == 0){
+                pares++;
+            }
+            else{
+                impares++;
+            }
+        }
+
+        //exibe a qtde de numeros pares e impares no console log
+        console.log(`Quantidade de numeros pares: ${pares}`);
+        console.log(`Quantidade de numeros pares: ${impares}`);
+
+        //exibe a quantidade de numeros pares e impares na tela
+        alert(`Quantidade de numeros pares: ${pares} \n Quantidade de numeros pares: ${impares}`);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rodolfo Inácio - Perfil</title>
+</head>
+<body>
+    <header>
+        <!-- Título do Meu Site  -->
+        <h1>Rodolfo de Oliveira Inácio</h1>
+        <p>- Desenvolvedor Full Stack -</p>
+        <!-- Menu Navegação -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#formacao">Formação Educacional</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Seção destinada as informações Sobre meu perfil -->
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Olá, eu sou Rodolfo de Oliveira Inácio. Eu sou um entusiasta de tecnologia e adoro aprender novas coisas. Meus hobbies incluem programação, fotografia e esportes ao ar livre.</p>
+            <p> Sou formado na área de T.I. pela instituição SENAI Santos Dumont e atualmente curso Banco de Dados pela Faculdade UNINTER.
+                Atuei com os mais diversos tipos de linguagens de programação e de consulta estruturada, dentre elas Python, Java, MySQL, entre outras.
+                Tenho facilidade em aprender, me comunicar e dedicação para fazer acontecer.
+                <br><br>
+                Conhecimento <br>
+                > PYTHON (Conhecimento Intermediário); <br>
+                > JAVA (Conhecimento Intermediário); <br>
+                > SQL ( <br>
+                Fundamentos, <br>
+                Modelagem de Dados, <br>
+                Construção e Manipulação de Estrututura de Dados <br>
+                Comandos Avançados <br>
+                );</p>
+        </section>
+        <!-- Seção destinada as informações Sobre minha formação acadêmica-->
+        <section id="formacao">
+            <h2>Formação Educacional e Idiomas</h2>
+            <p>Sou fluente em inglês e espanhol.</p>
+            <p>UNINTER Centro Universitário Internacional  <br>
+                Tecnologia em Banco de DadosTecnologia da Informação  <br>
+                2023 - 2024 <br> <br>
+                
+                Etep - Centro Universitário <br>
+                Engenharia BásicaMatemática <br>
+                2014 - 2016 <br> <br>
+                
+                SENAI Santos Dumont <br>
+                Técnico em Redes de ComputadoresInformática <br>
+                2010 - 2011 <br> <br>
+                
+                SESI <br>
+                Ensino Médio</p>
+        </section>
+        <!-- Seção destinada as informações Sobre meus portfólios(redirecionamento para meu linkedin) -->
+        <section id="portfolio">
+            <h2>Portfólio</h2>
+            <p>Aqui estão alguns dos meus projetos anteriores:</p>
+            <ul>
+                <li><a href="https://br.linkedin.com/in/rodolfo-de-oliveira-4a1939263?trk=people-guest_people_search-card">Projeto 1</a></li>
+                <li><a href="https://br.linkedin.com/in/rodolfo-de-oliveira-4a1939263?trk=people-guest_people_search-card">Projeto 2</a></li>
+                <li><a href="https://br.linkedin.com/in/rodolfo-de-oliveira-4a1939263?trk=people-guest_people_search-card">Projeto 3</a></li>
+            </ul>
+        </section>
+        <!-- Seção destinada ao formulário de Contato-->
+        <section id="contato">
+            <h2>Contato</h2>
+            <form id="contato-formulario">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <!-- Rodapé do meu site -->
+    <footer>
+        <p>Desenvolvido por Rodolfo de Oliveira Inácio</p>
+    </footer>
+    <!-- Script com eventos para armazenar informações, acionar submit, obter valores do formulário e limpar formulário html  -->
+    <script>
+        // Script para armazenar informações de contato do formulário
+        document.addEventListener("DOMContentLoaded", function () {
+        const contatoFormulario = document.getElementById("contato-formulario");
+        
+        //Script para acionar a função do evento com o submit do formulario
+        contatoFormulario.addEventListener("submit", function (envio) {
+        envio.preventDefault();
+
+        //Script para obter os valores dos campos do formulário e armazená-las em variáveis
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const mensagem = document.getElementById("mensagem").value;
+
+        //Script para apagar as informações do formulário, definindo os valores como vazios
+        document.getElementById("nome").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("mensagem").value = "";
+            });
+        });
+    </script>
+</body>
+</html>

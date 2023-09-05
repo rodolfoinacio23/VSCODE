@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantidade de homens e mulheres</title>
+</head>
+<body>
+    <h1>Quantiade de homens e mulheres de uma turma da faculdade</h1>
+    <form action="">
+        <label for="">Quantidade de homens:</label>
+        <input type="number" id="quantidade-homens"><br><br> <!-- id é exclusivo dentro da pagina html --> 
+        <label for="">Quantidade de mulheres:</label>
+        <input type="number" id="quantidade-mulheres"><br><br>
+        <input type="button" value="Calcular" onclick="calcularPorcentagens()">
+    </form>
+    <br>
+    <div id="tabela-porcentagens"></div>
+
+    <script>
+        function calcularPorcentagens(){
+            //leitura 
+            var quantidadeHomens = parseInt(document.getElementById("quantidade-homens").value);
+            var quantidadeMulheres = parseInt(document.getElementById("quantidade-mulheres").value);
+
+            //calculo da qtd de pessoas
+            var totalAlunos = quantidadeHomens + quantidadeMulheres;
+
+            //calculo percentual conforme genero
+            var percentualHomens = (quantidadeHomens/totalAlunos) * 100;
+            var percentualMulheres = (quantidadeMulheres/totalAlunos) * 100;
+
+            //criação da tabela em html dentro do js
+            var tabela = "<table border='1px'>";
+            tabela += "<tr><th></th><th>Quantidade</th><th>Percentual</th></tr>";
+            tabela += "<tr><td>Homens</td><td>" + quantidadeHomens + "</td><td>" + percentualHomens.toFixed(2) + "%</td></tr>";
+            tabela += "<tr><td>Mulheres</td><td>" + quantidadeMulheres + "</td><td>" + percentualMulheres.toFixed(2) + "%</td></tr>";
+            tabela += "</table>";
+
+            //exibir na pagina html
+            document.getElementById("tabela-porcentagens").innerHTML = tabela;
+        }
+    </script>
+</body>
+</html>

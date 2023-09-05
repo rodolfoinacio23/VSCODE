@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Lateral</title>
+    <style>
+        /* Reset de estilos padrão do navegador */
+        body, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilizando o menu lateral */
+        .menu {
+            background-color: #333;
+            color: #fff;
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto; /* Adicione uma barra de rolagem se o conteúdo for longo demais */
+        }
+
+        /* Estilizando a lista de navegação */
+        ul {
+            list-style-type: none;
+            padding: 20px;
+        }
+
+        /* Estilizando os itens do menu */
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Estilizando os links do menu */
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Mudando a cor do link ao passar o mouse */
+        a:hover {
+            color: #FFD700; /* Cor amarela ao passar o mouse */
+        }
+
+        /* Estilizando o conteúdo principal */
+        .conteudo {
+            margin-left: 250px; /* Deixe espaço para o menu lateral */
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </div>
+    <div class="conteudo">
+        <h1>Conteúdo da Página</h1>
+        <p>Bem-vindo ao meu site!</p>
+    </div>
+</body>
+</html>
