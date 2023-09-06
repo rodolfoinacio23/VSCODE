@@ -1,104 +1,98 @@
 *{
-
+    margin: 0;
 }
 /* Cabeçalho */
-body{
-    margin: 0;
-    background-color: rgb(250, 213, 210);
-
+geral{
+    background-color: rgb(255, 255, 255);
 }
 
-header{
+.cabecalho{
     background-color: black;
     width: 100%;
     border-bottom: 2px dashed orange;
     //border: 5px dotted;
     //border-color: chartreuse;
-
-}
-header div{
     padding: 10px;
 }
-header div h1{
+.cabecalho-titulo{
     font-family: brush script mt;
-    font-size: 80px;
+    font-size: 100px;
     margin: 0;
     padding: 10px;
     text-align: center;
-    color: orange;
-
+    color: rgb(255, 0, 140);
 }
-header div h2{
+.cabecalho-subtitulo{
     margin: 0;
     padding: 10px;
     text-align: center;
-    color: orange;
+    font-size: 40px;
+    color: rgb(255, 0, 140);
 }
 /* Menu Navegação */
-nav{
-    background-color:orange;
+.cabecalho-menu{
+    background-color: rgb(255, 0, 140);
     border-bottom: 1.5px solid black;
-    //border: 5px solid;
-    //border-color: rgb(247, 25, 25);
-    //border-radius: 10px;
-
-}
-nav ul{
     margin: 0;
-    margin-left: 10px;
-    padding: 0;
     display: flex;
+    justify-content: center;
 }
-nav ul li{
-    list-style-type: none;
-    padding: 5px;
-}
-nav ul li a{
+
+.cabecalho-menu-item{
     text-decoration: none;
     font-family: tahoma;
-    font-size: 18px;
-    color:black;
+    font-size: 22px;
+    color:white;
+    text-shadow: 4px 2px 3px rgba(0,0,0,0.5);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
-nav ul li:hover{
+.cabecalho-menu-item:hover{
     background-color: black;
-    
-}
-nav ul li a:hover{
     color: white;
-    
-}
-nav ul li:active{
-    background-color: rgb(253, 105, 51);
 }
 
-/* Disposição da div secoes com a tag aside */
+.cabecalho-menu-item:active{
+    background-color: rgb(255, 0, 140);
+}
 
-.disposicao{
+/* divisoria de conteudo à esquerda com conteudo lateral à direita */
+
+.divisoria-conteudo{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+
+/* main conteudo com as sections de conteudo principal */
+.conteudo{
     display:flex;
-}
-
-/* Seções do Site */
-
-.disposicao.secoes{
+    flex-direction: column;
+    align-items: center;
     margin: 0 auto; /* Alinhando divs ao centro da página */
 }
-div section{
-    background-color: white;
+.conteudo-principal{
+    background-color: rgba(250, 228, 228, 0.647);
     border: 2px solid;
-    border-color: orange;
+    border-color: rgb(255, 0, 140);
     border-radius: 10px;
-    margin: 5px;
+    margin: 15px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+    width: 90%;
+
 }
-div section h1{
+.conteudo-principal-titulo{
     font-family: arial;
     margin-bottom: 5px;
     margin-left: 35px;
 }
-div section p{
+.conteudo-principal-texto{
     margin: 10px;
 }
 
@@ -106,10 +100,10 @@ div section p{
 
 
 /* Aside */
-aside{
+.conteudo-lateral{
     background-color: white;
     border: 2px solid;
-    border-color: orange;
+    border-color:rgb(255, 0, 140);
     border-radius: 10px;
     margin: 5px;
     padding-left: 20px;
@@ -119,25 +113,21 @@ aside{
     font-family: arial;
     text-align: center;
 }
-aside div h6{
+.conteudo-lateral-divisoria-imagem{
+    border: 5px solid powderblue;
+    width: 200px;
+}
+.conteudo-lateral-divisoria-legenda{
     margin-top: 3px;
     margin-bottom: 20px;
 }
 
-
-
-
-
-
-
-
-aside div img{
-    border: 5px solid powderblue;
-    width: 200px;
-}
-
 /* Rodapé */
-footer{
+.rodape{
+    color: gray;
+    text-align: center;
+}
+.rodape-direitoautoral{
     color: gray;
     text-align: center;
 }
